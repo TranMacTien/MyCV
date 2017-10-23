@@ -1,0 +1,136 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font: normal 16px/1.3 "Dosis", Arial, sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 750px;
+  margin: 0 auto; }
+
+.row::after,
+.row::before {
+  content: '';
+  display: table;
+  height: 0;
+  visibility: hidden; }
+
+.row::after {
+  clear: both; }
+
+img {
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 5px auto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 auto; }
+
+.bg-red {
+  background-color: #ff2525;
+  border-top-color: #ff2525; }
+
+.bg-green {
+  background-color: #7eac00;
+  border-top-color: #7eac00; }
+
+.bg-blue {
+  background-color: #2888d6;
+  border-top-color: #2888d6; }
+
+.bg-yellow {
+  background-color: #ffa600;
+  border-top-color: #ffa600; }
+
+.col-1 {
+  width: 40%;
+  background-color: #303030;
+  color: white; }
+  .col-1 .avatar {
+    margin: 60px;
+    border-radius: 50%;
+    overflow: hidden; }
+  .col-1 .avatar__img {
+    height: 0;
+    padding-bottom: 100%;
+    background: url("avatar.jpg") center no-repeat;
+    background-size: cover; }
+  .col-1 .personal__title {
+    padding: 0 20px;
+    margin: 10px auto;
+    display: block;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative; }
+    .col-1 .personal__title::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-top: 10px solid;
+      border-right: 10px solid transparent;
+      border-top-color: inherit;
+      bottom: -9px;
+      left: 40px; }
+  .col-1 .personal-list {
+    padding: 10px 40px; }
+
+.col-2 {
+  width: 60%;
+  color: #303030;
+  padding: 80px 50px; }
+  .col-2 .title-name {
+    margin: 0;
+    line-height: 1; }
+  .col-2 .name {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1; }
+  .col-2 .text-name {
+    margin: 0; }
+  .col-2 .info {
+    margin-top: 50px; }
+  .col-2 .info__item {
+    margin-top: 30px; }
+  .col-2 .info__title,
+  .col-2 .timeline__title {
+    text-transform: uppercase; }
+  .col-2 .timeline__title {
+    color: #ff2525;
+    font-size: 16px; }
+    .col-2 .timeline__title span {
+      color: #303030;
+      padding-right: 10px; }
+  .col-2 .timeline__item {
+    margin: 15px auto; }
