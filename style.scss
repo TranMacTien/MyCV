@@ -14,6 +14,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
+    background: rgb(247, 247, 247);
 }
 
 .row::after,
@@ -27,9 +28,11 @@ body {
 .row::after {
     clear: both;
 }
-.fa{
+
+.fa {
     color: white;
 }
+
 img {
     outline: none;
     border: none;
@@ -132,7 +135,21 @@ h6 {
     .personal-list {
         padding: 10px 40px;
     }
-    .personnal-list__hobbies{
+    .personal-list__contact {
+        display: table;
+        margin: 10px 0;
+        .fa{
+            padding-right: 10px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        div{
+            display: table-cell;
+            vertical-align: middle;
+            // max-width: 90%;
+        }
+    }
+    .personnal-list__hobbies {
         // float: left;
         text-align: justify;
         display: inline-block;

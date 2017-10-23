@@ -12,7 +12,8 @@ body {
 
 .container {
   max-width: 800px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #f7f7f7; }
 
 .row::after,
 .row::before {
@@ -106,6 +107,16 @@ h6 {
       left: 40px; }
   .col-1 .personal-list {
     padding: 10px 40px; }
+  .col-1 .personal-list__contact {
+    display: table;
+    margin: 10px 0; }
+    .col-1 .personal-list__contact .fa {
+      padding-right: 10px;
+      display: table-cell;
+      vertical-align: middle; }
+    .col-1 .personal-list__contact div {
+      display: table-cell;
+      vertical-align: middle; }
   .col-1 .personnal-list__hobbies {
     text-align: justify;
     display: inline-block;
