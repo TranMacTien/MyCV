@@ -15,6 +15,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     background: rgb(247, 247, 247);
+    position: relative;
 }
 
 .row::after,
@@ -99,6 +100,8 @@ h6 {
     width: 40%;
     background-color: #303030;
     color: white;
+    position: absolute;
+    height: 100%;
     .avatar {
         margin: 60px;
         border-radius: 50%;

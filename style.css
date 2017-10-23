@@ -13,7 +13,8 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  background: #f7f7f7; }
+  background: #f7f7f7;
+  position: relative; }
 
 .row::after,
 .row::before {
@@ -75,7 +76,9 @@ h6 {
 .col-1 {
   width: 40%;
   background-color: #303030;
-  color: white; }
+  color: white;
+  position: absolute;
+  height: 100%; }
   .col-1 .avatar {
     margin: 60px;
     border-radius: 50%;
