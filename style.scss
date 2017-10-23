@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -27,12 +27,22 @@ body {
 .row::after {
     clear: both;
 }
-
+.fa{
+    color: white;
+}
 img {
     outline: none;
     border: none;
     display: block;
     width: 100%;
+}
+
+@mixin rate-bar() {
+    @for $i from 1 through 10 {
+        &.rate-#{$i*10} {
+            width: #{$i*10%};
+        }
+    }
 }
 
 .left {
@@ -122,6 +132,29 @@ h6 {
     .personal-list {
         padding: 10px 40px;
     }
+    .personnal-list__hobbies{
+        // float: left;
+        text-align: justify;
+        display: inline-block;
+        padding: 10px 10px;
+    }
+    .percent-bar {
+        margin: 5px auto;
+        height: 6px;
+        border-radius: 3px;
+        background-color: rgb(22, 22, 22);
+        position: relative;
+    }
+    .percent-bar__rate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 6px;
+        border-radius: 3px;
+        background: white;
+        @include rate-bar;
+    }
 }
 
 .col-2 {
@@ -147,9 +180,9 @@ h6 {
     }
     .info__item {
         margin-top: 30px;
-    }
-    .info__title {
-        // font-weight: normal;
+        p {
+            text-align: justify;
+        }
     }
     .info__title,
     .timeline__title {
@@ -165,5 +198,8 @@ h6 {
     }
     .timeline__item {
         margin: 15px auto;
+        p {
+            text-align: justify;
+        }
     }
 }
