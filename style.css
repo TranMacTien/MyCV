@@ -77,7 +77,6 @@ h6 {
 
 .col-1 {
   width: 40%;
-  background-color: #303030;
   color: white;
   position: relative;
   height: 100%; }
@@ -88,7 +87,10 @@ h6 {
     line-height: 40px;
     text-transform: uppercase;
     font-weight: normal;
-    position: relative; }
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0 6px 5px -3px black;
+    box-shadow: 0 6px 5px -3px black; }
     .col-1 .personal__title::after {
       content: '';
       display: block;
@@ -100,7 +102,9 @@ h6 {
       border-right: 10px solid transparent;
       border-top-color: inherit;
       bottom: -9px;
-      left: 40px; }
+      left: 40px;
+      -webkit-filter: drop-shadow(0 4px 2px black);
+      filter: drop-shadow(0 4px 2px black); }
   .col-1 .personal-list {
     padding: 10px 40px; }
   .col-1 .personal-list__contact {
@@ -137,28 +141,45 @@ h6 {
   width: 40%;
   height: 100%;
   background-color: #303030;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9); }
   @media (max-width: 640px) {
     .background-left {
-      display: none; } }
+      display: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; } }
 
 .wrapper {
   width: 40%;
   padding: 40px;
-  background-color: #303030;
   position: relative;
   z-index: 1; }
 
 .avatar {
   width: 100%;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .avatar::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: inset 10px 10px 30px #303030;
+    box-shadow: inset 10px 10px 30px #303030;
+    border-radius: 50%; }
 
 .avatar__img {
   height: 0;
   padding-bottom: 100%;
   background: url("avatar.jpg") center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
 
 .col-2 {
   width: 60%;
@@ -209,6 +230,7 @@ h6 {
   .col-2 {
     padding: 0 40px; }
   .col-1 {
-    position: static; }
+    position: static;
+    background-color: #303030; }
   .wrapper {
     background-color: transparent; } }
