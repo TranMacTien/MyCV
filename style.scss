@@ -109,7 +109,7 @@ h6 {
     background-color: #303030;
     color: white;
     position: relative;
-    max-height: 100%;
+    height: 100%;
     .personal__title {
         padding: 0 20px;
         margin: 10px auto;
@@ -171,11 +171,22 @@ h6 {
         // @include rate-bar;
     }
 }
-
+.background-left{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #303030;
+    z-index:0;
+    @include screen(){
+        display: none;
+    }
+}
 .wrapper{
     width:40%;
     padding:40px;
     background-color: #303030;
+    position: relative;
+    z-index: 1;
 }
 .avatar {
     width: 100%;
